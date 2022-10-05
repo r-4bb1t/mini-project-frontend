@@ -75,6 +75,11 @@ const Home: NextPage = () => {
               <div
                 className={`${styles.bubble} ${
                   message.isLeft ? styles.left : styles.right
+                }
+                ${
+                  message.options.length === 0 &&
+                  message.isLeft &&
+                  styles.ending
                 }`}
                 key={index}
               >
