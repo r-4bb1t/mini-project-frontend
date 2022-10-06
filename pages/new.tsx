@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   const [title, setTitle] = useState("");
   const [questions, setQuestions] = useState([
     {
-      content: "질문",
+      content: "",
       index: 0,
       options: [],
     },
@@ -60,6 +60,7 @@ const Home: NextPage = () => {
             <textarea
               className={`${styles.input} ${styles.textarea}`}
               value={question.content}
+              placeholder="질문"
               onChange={(e) =>
                 setQuestions((qs) =>
                   qs.map((q, i) => {
